@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Helados D' Panda - Anapoima, Cundinamarca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased selection:bg-amber-400 selection:text-amber-950">
+
+    <div class="bg-amber-500 text-amber-950 px-4 py-2 text-center text-xs md:text-sm font-semibold flex items-center justify-center gap-2 shadow-inner">
+        <i class="fa-solid fa-location-dot animate-bounce"></i>
+        <span>¡Elaborados con amor y dedicación en Anapoima, Cundinamarca! 🇨🇴 Pedidos directos por WhatsApp.</span>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-amber-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400 bg-amber-100 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                    <img id="navLogoImg" src="Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg" onerror="this.src='https://placehold.co/100x100/f59e0b/ffffff?text=Panda'" alt="Logo" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg sm:text-xl text-amber-950 tracking-tight leading-none">Los Helados D’ Panda</h1>
+                    <span class="text-xs font-medium text-amber-600">Artesanales de Anapoima</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-5 font-medium text-sm text-gray-700">
+                <a href="#inicio" class="hover:text-amber-600 transition-colors">Inicio</a>
+                <a href="#quienes-somos" class="hover:text-amber-600 transition-colors">Quiénes somos</a>
+                <a href="#evento-especial" class="hover:text-amber-600 transition-colors text-purple-700 font-bold flex items-center gap-1"><i class="fa-solid fa-wand-magic-sparkles"></i> Especial del Mes</a>
+                <a href="#sabores" class="hover:text-amber-600 transition-colors">Sabores (17)</a>
+                <a href="#promos" class="hover:text-amber-600 transition-colors">Combos</a>
+                <a href="#otros-productos" class="hover:text-amber-600 transition-colors">Más Productos</a>
+                <a href="#ubicacion" class="hover:text-amber-600 transition-colors">Visítanos</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <button onclick="toggleCartModal()" class="relative bg-amber-100 hover:bg-amber-200 text-amber-900 p-2.5 rounded-full transition-all flex items-center justify-center shadow-sm" title="Ver carrito">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    <span id="cartBadge" class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+                </button>
+
+                <button onclick="toggleAdminModal()" class="bg-gray-900 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-xs font-semibold shadow-md transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-lock text-[10px]"></i>
+                    <span>Administración</span>
+                </button>
+
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-gray-700 p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-2 shadow-lg">
+            <a href="#inicio" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Inicio</a>
+            <a href="#quienes-somos" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Quiénes somos</a>
+            <a href="#evento-especial" onclick="toggleMobileMenu()" class="block py-2 text-purple-700 font-bold">Especial del Mes (Halloween / Fechas)</a>
+            <a href="#sabores" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Nuestros 17 Sabores</a>
+            <a href="#promos" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Combos y Promociones</a>
+            <a href="#otros-productos" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Otros Productos</a>
+            <a href="#ubicacion" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Visítanos</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="relative bg-gradient-to-b from-amber-100/60 via-amber-50/30 to-white py-16 md:py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center md:text-left">
+                    <span class="inline-flex items-center gap-2 bg-amber-200/80 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        <i class="fa-solid fa-ice-cream"></i> 100% Artesanales en Anapoima
+                    </span>
+                    <h2 id="heroTitle" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-amber-950 tracking-tight leading-tight">
+                        ¡Disfruta el sabor de la felicidad con Los Helados D’ Panda!
+                    </h2>
+                    <p id="heroSubtitle" class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-xl mx-auto md:mx-0">
+                        Helados artesanales elaborados en Anapoima, Cundinamarca, con dedicación y variedad de sabores para disfrutar en familia.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+                        <a href="#sabores" class="bg-amber-500 hover:bg-amber-600 text-amber-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all flex items-center gap-2">
+                            <span>Conoce nuestros sabores</span>
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                        <a href="#evento-especial" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-md flex items-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span id="heroEventBtnText">Especial Halloween</span>
+                        </a>
+                        <a href="#ubicacion" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-3.5 rounded-xl transition-all shadow-sm flex items-center gap-2">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span>Cómo llegar</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center">
+                    <div class="absolute -inset-2 bg-gradient-to-tr from-amber-400 to-orange-300 rounded-3xl blur-lg opacity-30 animate-pulse"></div>
+                    <div class="relative bg-white p-4 rounded-3xl shadow-xl border-4 border-amber-200 max-w-md w-full">
+                        <img id="heroMainImg" src="Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg" onerror="this.src='https://placehold.co/500x500/f59e0b/ffffff?text=Helados+D+Panda'" alt="Helados D' Panda" class="rounded-2xl w-full h-80 object-cover shadow-inner">
+                        <div class="mt-4 bg-amber-50 p-4 rounded-xl border border-amber-200 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-amber-950 text-sm">Orgullo de Anapoima</h4>
+                                <p class="text-xs text-gray-600">Frescura y calidad inigualable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="quienes-somos" class="py-16 bg-white border-y border-amber-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+                <span class="text-amber-600 font-bold uppercase tracking-widest text-xs">Nuestra Historia</span>
+                <h3 class="text-3xl font-extrabold text-amber-950">Pasión por el helado artesanal</h3>
+                <p id="aboutText" class="text-gray-600 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+                    En Los Helados D’ Panda nos dedicamos a elaborar helados artesanales únicos en el corazón de Anapoima, Cundinamarca. Seleccionamos cuidadosamente cada ingrediente para garantizar una frescura inigualable, creando momentos felices para niños, adultos y toda la familia.
+                </p>
+            </div>
+        </section>
+
+        <!-- Special Event / Halloween Section -->
+        <section id="evento-especial" class="py-20 bg-gradient-to-r from-purple-900 via-purple-950 to-indigo-950 text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <span id="eventBadge" class="bg-amber-400 text-purple-950 text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5 shadow">
+                        <i class="fa-solid fa-ghost"></i> Evento Especial de Temporada
+                    </span>
+                    <h3 id="eventTitle" class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight">¡Festival de Halloween y Sabores Mágicos!</h3>
+                    <p id="eventDesc" class="text-purple-200 text-sm sm:text-base leading-relaxed">
+                        Durante todo este mes disfrutas de nuestra edición limitada inspirada en Halloween. Ven disfrazado o pide tu caja especial de temporada con sorpresas y decoraciones exclusivas en Anapoima.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <button onclick="addSpecialEventToCart()" class="bg-amber-400 hover:bg-amber-300 text-purple-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-cart-plus text-lg"></i>
+                            <span id="eventBtnText">Pedir Especial de Halloween ($32,000)</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="bg-white/10 backdrop-blur-md p-4 rounded-3xl border border-purple-500/30 shadow-2xl max-w-sm w-full">
+                        <img id="eventImg" src="Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg" onerror="this.src='https://placehold.co/400x300/6b21a8/ffffff?text=Halloween+Special'" alt="Evento Especial" class="rounded-2xl w-full h-64 object-cover shadow-inner">
+                        <div class="mt-4 text-center space-y-1">
+                            <h4 id="eventCardTitle" class="font-bold text-amber-300 text-base">Caja Misteriosa D' Panda</h4>
+                            <p class="text-xs text-purple-200">Pack especial de temporada disponible por tiempo limitado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 17 Flavors Catalog -->
+        <section id="sabores" class="py-20 bg-amber-50/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                <div class="text-center space-y-3">
+                    <span class="text-amber-600 font-bold uppercase tracking-widest text-xs">Catálogo Oficial</span>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-amber-950">Nuestros 17 Sabores Artesanales</h3>
+                    <p class="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
+                        Explora nuestra variedad de helados. Filtra por categoría o busca tu sabor favorito.
+                    </p>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-4 rounded-2xl shadow-sm border border-amber-100">
+                    <div class="relative w-full md:w-96">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                            <i class="fa-solid fa-search"></i>
+                        </span>
+                        <input type="text" id="searchInput" oninput="filterFlavors()" placeholder="Buscar sabor..." class="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-amber-500">
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
+                        <button onclick="setCategoryFilter('todos')" id="filter-todos" class="category-btn bg-amber-500 text-amber-950 font-semibold px-4 py-2 rounded-xl text-xs transition-all shadow-sm">Todos (17)</button>
+                        <button onclick="setCategoryFilter('niños')" id="filter-niños" class="category-btn bg-gray-100 hover:bg-amber-100 text-gray-700 font-semibold px-4 py-2 rounded-xl text-xs transition-all">Niños</button>
+                        <button onclick="setCategoryFilter('adultos')" id="filter-adultos" class="category-btn bg-gray-100 hover:bg-amber-100 text-gray-700 font-semibold px-4 py-2 rounded-xl text-xs transition-all">Adultos</button>
+                        <button onclick="setCategoryFilter('familia')" id="filter-familia" class="category-btn bg-gray-100 hover:bg-amber-100 text-gray-700 font-semibold px-4 py-2 rounded-xl text-xs transition-all">Familia</button>
+                    </div>
+                </div>
+
+                <div id="flavorsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Promos: Box of 8 -->
+        <section id="promos" class="py-20 bg-white border-t border-amber-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center space-y-3">
+                    <span class="bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Combos y Promociones D’ Panda</span>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-amber-950">Caja de 8 Helados del Mismo Sabor</h3>
+                    <p class="text-gray-600 text-sm sm:text-base max-w-xl mx-auto">
+                        ¡Lleva tu sabor favorito por partida doble! Selecciona un sabor y disfruta de una caja con 8 unidades idénticas.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-br from-amber-50 to-amber-100/50 border-2 border-amber-200 rounded-3xl p-6 sm:p-10 shadow-lg grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="relative flex justify-center">
+                        <div class="bg-white p-4 rounded-2xl shadow-md border border-amber-200 max-w-sm w-full text-center space-y-3">
+                            <div class="h-56 rounded-xl overflow-hidden bg-amber-100 relative">
+                                <img src="Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg" onerror="this.src='https://placehold.co/400x300/f59e0b/ffffff?text=Caja+8'" alt="Caja" class="w-full h-full object-cover">
+                                <span class="absolute top-3 right-3 bg-amber-500 text-amber-950 font-extrabold text-xs px-3 py-1 rounded-full shadow">Pack x 8 Unidades</span>
+                            </div>
+                            <h4 class="font-bold text-amber-950 text-lg">Caja Especial D' Panda</h4>
+                            <p class="text-xs text-gray-600">Incluye exactamente 8 helados artesanales del sabor seleccionado.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <span class="text-xs font-bold text-amber-600 uppercase tracking-wide">Paso a paso</span>
+                            <h4 class="text-2xl font-bold text-amber-950">Personaliza tu Caja de 8</h4>
+                            <p class="text-sm text-gray-600">Los 8 helados deben ser del mismo sabor seleccionado.</p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-gray-700">Selecciona el sabor para tu caja:</label>
+                            <select id="promoFlavorSelect" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 font-medium">
+                                <!-- Populated dynamically -->
+                            </select>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl border border-amber-200 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-gray-500 block">Precio de la Caja (8 unidades)</span>
+                                <span id="promoBoxPriceDisplay" class="text-2xl font-extrabold text-amber-900">$24,000</span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-gray-500 block">Estado</span>
+                                <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-full">Disponible</span>
+                            </div>
+                        </div>
+
+                        <button onclick="addPromoBoxToCart()" class="w-full bg-amber-500 hover:bg-amber-600 text-amber-950 font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-box-open text-lg"></i>
+                            <span>Agregar Caja de 8 al Carrito</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Products Section -->
+        <section id="otros-productos" class="py-20 bg-amber-50/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                <div class="text-center space-y-3">
+                    <span class="text-amber-600 font-bold uppercase tracking-widest text-xs">Descubre más</span>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-amber-950">Otros Productos de Nuestra Marca</h3>
+                    <p class="text-gray-600 text-sm sm:text-base max-w-xl mx-auto">
+                        Complementa tu experiencia con más delicias creadas especialmente para ti.
+                    </p>
+                </div>
+
+                <div id="otherProductsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="ubicacion" class="py-20 bg-white border-t border-amber-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center space-y-3">
+                    <span class="text-amber-600 font-bold uppercase tracking-widest text-xs">Punto de Venta y Fábrica</span>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-amber-950">Visítanos en Anapoima</h3>
+                    <p id="storeAddressText" class="text-gray-600 text-sm sm:text-base max-w-xl mx-auto">
+                        Anapoima, Cundinamarca, Colombia. ¡Ven a disfrutar un helado recién hecho!
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    <div class="bg-amber-50 p-6 rounded-2xl border border-amber-200 space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-amber-500 text-amber-950 rounded-xl flex items-center justify-center shrink-0 font-bold text-lg">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-amber-950 text-base">Fábrica y Principal</h4>
+                                <p id="mainAddressDetail" class="text-xs text-gray-600 mt-1">Anapoima, Cundinamarca, Colombia.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 pt-2 border-t border-amber-200">
+                            <div class="flex items-center gap-3 text-xs text-gray-700">
+                                <i class="fa-solid fa-clock text-amber-600 text-sm"></i>
+                                <span>Lunes a Domingo: 10:00 a.m. - 8:00 p.m.</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-xs text-gray-700">
+                                <i class="fa-solid fa-phone text-amber-600 text-sm"></i>
+                                <span id="storePhoneDisplay">+57 300 000 0000</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <a id="googleMapsBtn" href="https://maps.google.com/?q=Anapoima,+Cundinamarca" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-xl transition-all flex items-center justify-center gap-2 text-xs shadow-sm">
+                                <i class="fa-solid fa-diamond-turn-right"></i>
+                                <span>Cómo llegar en Google Maps</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 bg-gray-100 rounded-3xl overflow-hidden shadow-inner border border-amber-200 h-96 relative">
+                        <iframe id="mapIframe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.9!2d-74.54!3d4.54!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zVuW5hcG9pbWEsIEN1bmRpbmFtYXJjYSwgQ29sb21iaWE!5e0!3m2!1ses!2sco!4v1650000000000"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer & Social Media -->
+        <section class="py-16 bg-amber-950 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+                <div class="space-y-3">
+                    <h3 class="text-3xl font-extrabold">Mantén el Contacto con D’ Panda</h3>
+                    <p class="text-amber-200 text-sm max-w-md mx-auto">Síguenos en nuestras redes sociales o escríbenos por WhatsApp.</p>
+                </div>
+
+                <div id="socialLinksContainer" class="flex flex-wrap items-center justify-center gap-4">
+                    <a id="whatsappSocialBtn" href="https://wa.me/573000000000" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl text-sm flex items-center gap-2 transition-all shadow-md">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp Comercial</span>
+                    </a>
+                    <a id="instagramSocialBtn" href="#" target="_blank" class="bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-90 text-white font-semibold px-6 py-3 rounded-xl text-sm flex items-center gap-2 transition-all shadow-md">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a id="facebookSocialBtn" href="#" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-xl text-sm flex items-center gap-2 transition-all shadow-md">
+                        <i class="fa-brands fa-facebook text-lg"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a id="tiktokSocialBtn" href="#" target="_blank" class="bg-gray-900 border border-gray-700 hover:bg-gray-800 text-white font-semibold px-6 py-3 rounded-xl text-sm flex items-center gap-2 transition-all shadow-md">
+                        <i class="fa-brands fa-tiktok text-lg"></i>
+                        <span>TikTok</span>
+                    </a>
+                </div>
+
+                <div class="pt-8 border-t border-amber-900 text-xs text-amber-300">
+                    <p>© 2026 Los Helados D’ Panda. Todos los derechos reservados. Anapoima, Cundinamarca, Colombia.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-amber-200 overflow-hidden">
+            <div class="bg-amber-500 text-amber-950 px-6 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-2 font-bold text-lg">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Tu Carrito D' Panda</span>
+                </div>
+                <button onclick="toggleCartModal()" class="w-8 h-8 rounded-full bg-amber-400 hover:bg-amber-300 text-amber-950 flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div id="cartItemsContainer" class="p-6 overflow-y-auto flex-1 space-y-4 divide-y divide-gray-100">
+                <!-- Injected via JS -->
+            </div>
+
+            <div class="bg-gray-50 p-6 border-t border-gray-200 space-y-4">
+                <div class="flex items-center justify-between text-base font-bold text-amber-950">
+                    <span>Total General:</span>
+                    <span id="cartTotalPrice" class="text-xl">$0</span>
+                </div>
+
+                <div id="checkoutFormSection" class="space-y-3 pt-2 border-t border-gray-200">
+                    <h5 class="font-bold text-xs text-gray-700 uppercase tracking-wider">Datos para el Pedido</h5>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <input type="text" id="custName" placeholder="Tu Nombre *" class="bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500">
+                        <input type="text" id="custPhone" placeholder="Teléfono / Contacto *" class="bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <select id="custDeliveryMode" onchange="toggleDeliveryAddress()" class="bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500">
+                            <option value="Recoger en establecimiento">Recoger en establecimiento</option>
+                            <option value="Solicitar domicilio">Solicitar domicilio</option>
+                        </select>
+                        <input type="text" id="custAddress" placeholder="Dirección de entrega" class="bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500 hidden">
+                    </div>
+                    <textarea id="custNotes" placeholder="Observaciones especiales..." class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500 h-16 resize-none"></textarea>
+                </div>
+
+                <button onclick="sendOrderToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Enviar pedido por WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 100% Comprehensive Admin Panel Modal -->
+    <div id="adminModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[95vh] flex flex-col shadow-2xl border border-gray-300 overflow-hidden">
+            <div class="bg-gray-900 text-white px-6 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-2 font-bold text-base">
+                    <i class="fa-solid fa-lock text-amber-400"></i>
+                    <span>Panel de Administración Total (Los Helados D' Panda)</span>
+                </div>
+                <button onclick="toggleAdminModal()" class="w-8 h-8 rounded-full bg-gray-800 hover:bg-gray-700 text-white flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="p-6 overflow-y-auto flex-1 space-y-6 bg-gray-50">
+                <!-- Login View -->
+                <div id="adminLoginBox" class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center space-y-4">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-900 rounded-full flex items-center justify-center mx-auto text-xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="font-bold text-xl text-gray-900">Acceso Administrativo</h4>
+                    <p class="text-xs text-gray-600">Ingresa la contraseña para controlar 100% de la página, textos, imágenes, redes y sabores.</p>
+                    <input type="password" id="adminPasswordInput" placeholder="Contraseña (por defecto: panda2026)" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 text-center">
+                    <button onclick="verifyAdminLogin()" class="w-full bg-amber-500 hover:bg-amber-600 text-amber-950 font-bold py-3 rounded-xl transition-all shadow-sm text-sm">
+                        Ingresar al Panel
+                    </button>
+                    <p class="text-[11px] text-gray-400">Contraseña inicial: <code class="bg-gray-100 px-1.5 py-0.5 rounded text-gray-600">panda2026</code></p>
+                </div>
+
+                <!-- Admin Dashboard View -->
+                <div id="adminDashboardBox" class="hidden space-y-6">
+                    <div class="flex items-center justify-between bg-white p-4 rounded-2xl border border-gray-200 shadow-sm">
+                        <div>
+                            <span class="text-xs text-gray-500 block">Estado del Sistema</span>
+                            <span class="font-bold text-emerald-600 text-sm"><i class="fa-solid fa-circle-check"></i> Modo Administrador Activo</span>
+                        </div>
+                        <button onclick="logoutAdmin()" class="bg-red-50 hover:bg-red-100 text-red-700 px-4 py-2 rounded-xl text-xs font-bold transition-all">
+                            Cerrar Sesión
+                        </button>
+                    </div>
+
+                    <!-- 1. GENERAL, LOGO & HERO CONFIG -->
+                    <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-4">
+                        <h5 class="font-bold text-sm text-amber-950 uppercase tracking-wide flex items-center gap-2">
+                            <i class="fa-solid fa-image"></i> 1. Logo, Portada y WhatsApp Comercial
+                        </h5>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Subir Logo Oficial desde tu PC:</label>
+                                <input type="file" id="adminLogoFileInput" accept="image/*" onchange="previewImageUpload(event, 'logo')" class="w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-amber-100 file:text-amber-950 hover:file:bg-amber-200">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Subir Foto de Portada (Hero):</label>
+                                <input type="file" id="adminHeroFileInput" accept="image/*" onchange="previewImageUpload(event, 'hero')" class="w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-amber-100 file:text-amber-950 hover:file:bg-amber-200">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Número de WhatsApp Comercial:</label>
+                                <input type="text" id="adminWhatsappInput" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500" placeholder="573000000000">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Precio de Caja de 8 Helados ($):</label>
+                                <input type="number" id="adminPromoPriceInput" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Título Principal de la Portada:</label>
+                            <input type="text" id="adminHeroTitleInput" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Texto / Historia "Quiénes Somos":</label>
+                            <textarea id="adminAboutInput" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500 h-20"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- 2. SPECIAL EVENT / HALLOWEEN CONFIG -->
+                    <div class="bg-white p-5 rounded-2xl border border-purple-200 shadow-sm space-y-4 bg-purple-50/20">
+                        <h5 class="font-bold text-sm text-purple-950 uppercase tracking-wide flex items-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> 2. Configurar Especial del Mes (Halloween / Fechas Especiales)
+                        </h5>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Título del Evento / Temporada:</label>
+                                <input type="text" id="adminEventTitleInput" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-purple-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Subir Imagen del Evento:</label>
+                                <input type="file" id="adminEventFileInput" accept="image/*" onchange="previewImageUpload(event, 'event')" class="w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-purple-100 file:text-purple-950 hover:file:bg-purple-200">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Descripción del Evento Especial:</label>
+                            <textarea id="adminEventDescInput" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-purple-500 h-16"></textarea>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Precio del Paquete Especial ($):</label>
+                                <input type="number" id="adminEventPriceInput" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Nombre del Paquete Especial:</label>
+                                <input type="text" id="adminEventCardTitleInput" class="w-full bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. SOCIAL MEDIA LINKS CONFIG -->
+                    <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-4">
+                        <h5 class="font-bold text-sm text-amber-950 uppercase tracking-wide flex items-center gap-2">
+                            <i class="fa-solid fa-share-nodes"></i> 3. Redes Sociales (Enlaces editables)
+                        </h5>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Enlace de Instagram:</label>
+                                <input type="text" id="adminInstagramInput" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-3 py-2 text-xs" placeholder="https://instagram.com/...">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Enlace de Facebook:</label>
+                                <input type="text" id="adminFacebookInput" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-3 py-2 text-xs" placeholder="https://facebook.com/...">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Enlace de TikTok:</label>
+                                <input type="text" id="adminTiktokInput" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-3 py-2 text-xs" placeholder="https://tiktok.com/...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. 17 FLAVORS MANAGEMENT -->
+                    <div class="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-4">
+                        <h5 class="font-bold text-sm text-amber-950 uppercase tracking-wide flex items-center gap-2">
+                            <i class="fa-solid fa-ice-cream"></i> 4. Administrar los 17 Sabores y sus Fotos
+                        </h5>
+                        <p class="text-xs text-gray-600">Cambia nombre, descripción, precio, stock, categoría y sube la foto real de cada sabor desde tu PC.</p>
+                        <div id="adminFlavorsListContainer" class="space-y-4 max-h-[450px] overflow-y-auto pr-2">
+                            <!-- Injected via JS -->
+                        </div>
+                    </div>
+
+                    <div class="pt-4 text-center">
+                        <button onclick="saveAdminChanges()" class="bg-amber-500 hover:bg-amber-600 text-amber-950 font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all text-sm flex items-center justify-center gap-2 mx-auto">
+                            <i class="fa-solid fa-floppy-disk text-lg"></i>
+                            <span>Guardar y Publicar Cambios en la Web</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let storeData = {
+            whatsappNumber: "573000000000",
+            promoBoxPrice: 24000,
+            logoImg: "Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg",
+            heroImg: "Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg",
+            heroTitle: "¡Disfruta el sabor de la felicidad con Los Helados D’ Panda!",
+            aboutText: "En Los Helados D’ Panda nos dedicamos a elaborar helados artesanales únicos en el corazón de Anapoima, Cundinamarca. Seleccionamos cuidadosamente cada ingrediente para garantizar una frescura inigualable, creando momentos felices para niños, adultos y toda la familia.",
+            eventTitle: "¡Festival de Halloween y Sabores Mágicos!",
+            eventDesc: "Durante todo este mes disfrutas de nuestra edición limitada inspirada en Halloween. Ven disfrazado o pide tu caja especial de temporada con sorpresas y decoraciones exclusivas en Anapoima.",
+            eventPrice: 32000,
+            eventCardTitle: "Caja Misteriosa D' Panda",
+            eventImg: "Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg",
+            instagramUrl: "#",
+            facebookUrl: "#",
+            tiktokUrl: "#",
+            flavors: []
+        };
+
+        function initFlavors() {
+            const categories = ["niños", "adultos", "familia"];
+            for (let i = 1; i <= 17; i++) {
+                storeData.flavors.push({
+                    id: i,
+                    name: `Sabor ${i}`,
+                    description: `Helado artesanal elaborado con dedicación en Anapoima.`,
+                    price: 3500,
+                    stock: 20,
+                    category: categories[(i - 1) % 3],
+                    image: "Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg"
+                });
+            }
+        }
+
+        let otherProducts = [
+            { id: 1, name: "Cono Wafer Especial", description: "Cono crujiente para acompañar tu helado.", price: 1500, stock: 50, image: "Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg" },
+            { id: 2, name: "Topping de Chocolate", description: "Salsa de chocolate artesanal.", price: 2000, stock: 30, image: "Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg" },
+            { id: 3, name: "Topping de Frutos Rojos", description: "Sirope natural de frutos de la región.", price: 2500, stock: 25, image: "Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg" }
+        ];
+
+        let cart = [];
+        let currentFilter = 'todos';
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initFlavors();
+            renderAll();
+        });
+
+        function renderAll() {
+            document.getElementById('navLogoImg').src = storeData.logoImg;
+            document.getElementById('heroMainImg').src = storeData.heroImg;
+            document.getElementById('heroTitle').textContent = storeData.heroTitle;
+            document.getElementById('aboutText').textContent = storeData.aboutText;
+            document.getElementById('storePhoneDisplay').textContent = `+${storeData.whatsappNumber}`;
+            document.getElementById('whatsappSocialBtn').href = `https://wa.me/${storeData.whatsappNumber}`;
+            document.getElementById('promoBoxPriceDisplay').textContent = `$${storeData.promoBoxPrice.toLocaleString()}`;
+
+            // Special Event Render
+            document.getElementById('eventTitle').textContent = storeData.eventTitle;
+            document.getElementById('eventDesc').textContent = storeData.eventDesc;
+            document.getElementById('eventImg').src = storeData.eventImg;
+            document.getElementById('eventCardTitle').textContent = storeData.eventCardTitle;
+            document.getElementById('heroEventBtnText').textContent = storeData.eventTitle.length > 20 ? "Especial del Mes" : storeData.eventTitle;
+            document.getElementById('eventBtnText').textContent = `Pedir ${storeData.eventCardTitle} ($${storeData.eventPrice.toLocaleString()})`;
+
+            // Social links render
+            document.getElementById('instagramSocialBtn').href = storeData.instagramUrl;
+            document.getElementById('facebookSocialBtn').href = storeData.facebookUrl;
+            document.getElementById('tiktokSocialBtn').href = storeData.tiktokUrl;
+
+            renderFlavors();
+            renderOtherProducts();
+            populatePromoDropdown();
+            updateCartBadge();
+        }
+
+        function renderFlavors() {
+            const grid = document.getElementById('flavorsGrid');
+            grid.innerHTML = '';
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            storeData.flavors.forEach(flavor => {
+                if (currentFilter !== 'todos' && flavor.category !== currentFilter) return;
+                if (searchTerm && !flavor.name.toLowerCase().includes(searchTerm) && !flavor.description.toLowerCase().includes(searchTerm)) return;
+
+                let badgeColor = flavor.category === 'niños' ? 'bg-pink-100 text-pink-800' : flavor.category === 'adultos' ? 'bg-purple-100 text-purple-800' : 'bg-amber-100 text-amber-800';
+
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-2xl overflow-hidden shadow-sm border border-amber-100 flex flex-col justify-between transition-all hover:shadow-md';
+                card.innerHTML = `
+                    <div class="relative h-48 bg-amber-50">
+                        <img src="${flavor.image}" onerror="this.src='https://placehold.co/400x300/f59e0b/ffffff?text=${encodeURIComponent(flavor.name)}'" alt="${flavor.name}" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 ${badgeColor} text-[10px] font-bold px-2.5 py-1 rounded-full uppercase shadow-sm">${flavor.category}</span>
+                        <span class="absolute top-3 right-3 ${flavor.stock > 5 ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'} text-[10px] font-bold px-2 py-0.5 rounded-full">Stock: ${flavor.stock}</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-1">
+                            <h4 class="font-bold text-amber-950 text-base">${flavor.name}</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">${flavor.description}</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                            <div>
+                                <span class="text-[10px] text-gray-400 block">Precio unidad</span>
+                                <span class="font-extrabold text-amber-900 text-base">$${flavor.price.toLocaleString()}</span>
+                            </div>
+                            <button onclick="addFlavorToCart(${flavor.id})" class="bg-amber-500 hover:bg-amber-600 text-amber-950 px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm flex items-center gap-1.5">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function setCategoryFilter(category) {
+            currentFilter = category;
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.className = 'category-btn bg-gray-100 hover:bg-amber-100 text-gray-700 font-semibold px-4 py-2 rounded-xl text-xs transition-all';
+            });
+            document.getElementById(`filter-${category}`).className = 'category-btn bg-amber-500 text-amber-950 font-semibold px-4 py-2 rounded-xl text-xs transition-all shadow-sm';
+            renderFlavors();
+        }
+
+        function filterFlavors() {
+            renderFlavors();
+        }
+
+        function renderOtherProducts() {
+            const grid = document.getElementById('otherProductsGrid');
+            grid.innerHTML = '';
+            otherProducts.forEach(prod => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-2xl overflow-hidden shadow-sm border border-amber-100 flex flex-col justify-between';
+                card.innerHTML = `
+                    <div class="relative h-44 bg-amber-50">
+                        <img src="${prod.image}" onerror="this.src='https://placehold.co/400x300/f59e0b/ffffff?text=${encodeURIComponent(prod.name)}'" alt="${prod.name}" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Stock: ${prod.stock}</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-1">
+                            <h4 class="font-bold text-amber-950 text-base">${prod.name}</h4>
+                            <p class="text-xs text-gray-600">${prod.description}</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-gray-100">
+                            <span class="font-extrabold text-amber-900 text-base">$${prod.price.toLocaleString()}</span>
+                            <button onclick="addOtherToCart(${prod.id})" class="bg-amber-500 hover:bg-amber-600 text-amber-950 px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-sm">
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function populatePromoDropdown() {
+            const select = document.getElementById('promoFlavorSelect');
+            select.innerHTML = '';
+            storeData.flavors.forEach(flavor => {
+                const opt = document.createElement('option');
+                opt.value = flavor.id;
+                opt.textContent = `${flavor.name} (${flavor.category})`;
+                select.appendChild(opt);
+            });
+        }
+
+        function addSpecialEventToCart() {
+            cart.push({
+                type: 'specialEvent',
+                name: `Especial del Mes: ${storeData.eventCardTitle}`,
+                price: storeData.eventPrice,
+                qty: 1
+            });
+            updateCartBadge();
+            renderCartItems();
+            alert(`¡"${storeData.eventCardTitle}" agregado al carrito con éxito!`);
+        }
+
+        function addPromoBoxToCart() {
+            const flavorId = parseInt(document.getElementById('promoFlavorSelect').value);
+            const flavor = storeData.flavors.find(f => f.id === flavorId);
+            if (!flavor) return;
+
+            if (flavor.stock < 8) {
+                alert(`Inventario insuficiente. Solo quedan ${flavor.stock} unidades de ${flavor.name}. Se necesitan 8.`);
+                return;
+            }
+
+            const existingItem = cart.find(item => item.type === 'promoBox' && item.flavorId === flavorId);
+            if (existingItem) {
+                existingItem.boxesCount++;
+            } else {
+                cart.push({
+                    type: 'promoBox',
+                    flavorId: flavorId,
+                    name: `Caja de 8 Helados (${flavor.name})`,
+                    price: storeData.promoBoxPrice,
+                    boxesCount: 1
+                });
+            }
+            updateCartBadge();
+            renderCartItems();
+            alert(`¡Caja de 8 helados de ${flavor.name} agregada al carrito!`);
+        }
+
+        function addFlavorToCart(id) {
+            const flavor = storeData.flavors.find(f => f.id === id);
+            if (flavor.stock <= 0) {
+                alert('Lo sentimos, este sabor está agotado.');
+                return;
+            }
+            const existing = cart.find(item => item.type === 'flavor' && item.id === id);
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ type: 'flavor', id: id, name: flavor.name, price: flavor.price, qty: 1 });
+            }
+            updateCartBadge();
+            renderCartItems();
+        }
+
+        function addOtherToCart(id) {
+            const prod = otherProducts.find(p => p.id === id);
+            if (prod.stock <= 0) {
+                alert('Producto agotado.');
+                return;
+            }
+            const existing = cart.find(item => item.type === 'other' && item.id === id);
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ type: 'other', id: id, name: prod.name, price: prod.price, qty: 1 });
+            }
+            updateCartBadge();
+            renderCartItems();
+        }
+
+        function updateCartBadge() {
+            let totalUnits = 0;
+            cart.forEach(item => {
+                if (item.type === 'promoBox') totalUnits += (item.boxesCount * 8);
+                else totalUnits += item.qty;
+            });
+            document.getElementById('cartBadge').textContent = totalUnits;
+        }
+
+        function toggleCartModal() {
+            const modal = document.getElementById('cartModal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) renderCartItems();
+        }
+
+        function renderCartItems() {
+            const container = document.getElementById('cartItemsContainer');
+            container.innerHTML = '';
+            if (cart.length === 0) {
+                container.innerHTML = `<p class="text-center text-gray-500 py-8 text-sm">Tu carrito está vacío.</p>`;
+                document.getElementById('cartTotalPrice').textContent = '$0';
+                return;
+            }
+
+            let total = 0;
+            cart.forEach((item, index) => {
+                let itemTotal = item.type === 'promoBox' ? (item.price * item.boxesCount) : (item.price * item.qty);
+                total += itemTotal;
+
+                const div = document.createElement('div');
+                div.className = 'py-3 flex items-center justify-between text-xs sm:text-sm';
+                div.innerHTML = `
+                    <div>
+                        <h6 class="font-bold text-amber-950">${item.name}</h6>
+                        <span class="text-[11px] text-gray-500">${item.type === 'promoBox' ? 'Cajas: ' + item.boxesCount + ' (8u)' : 'Cantidad: ' + item.qty}</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="font-bold text-amber-900">$${itemTotal.toLocaleString()}</span>
+                        <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700 p-1"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+            document.getElementById('cartTotalPrice').textContent = `$${total.toLocaleString()}`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartBadge();
+            renderCartItems();
+        }
+
+        function toggleDeliveryAddress() {
+            const mode = document.getElementById('custDeliveryMode').value;
+            const addrInput = document.getElementById('custAddress');
+            if (mode === 'Solicitar domicilio') addrInput.classList.remove('hidden');
+            else addrInput.classList.add('hidden');
+        }
+
+        function sendOrderToWhatsApp() {
+            if (cart.length === 0) {
+                alert('Tu carrito está vacío.');
+                return;
+            }
+
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const mode = document.getElementById('custDeliveryMode').value;
+            const address = document.getElementById('custAddress').value.trim();
+            const notes = document.getElementById('custNotes').value.trim();
+
+            if (!name || !phone) {
+                alert('Por favor ingresa tu Nombre y Teléfono.');
+                return;
+            }
+
+            let message = `🍦 *NUEVO PEDIDO - LOS HELADOS D' PANDA* 🐼\n\n👤 *Cliente:* ${name}\n📞 *Contacto:* ${phone}\n🚚 *Modalidad:* ${mode}\n`;
+            if (mode === 'Solicitar domicilio') message += `📍 *Dirección:* ${address}\n`;
+            if (notes) message += `📝 *Notas:* ${notes}\n`;
+            message += `\n🛒 *DETALLE:*\n`;
+
+            let total = 0;
+            cart.forEach(item => {
+                let sub = item.type === 'promoBox' ? (item.price * item.boxesCount) : (item.price * item.qty);
+                total += sub;
+                message += `- ${item.type === 'promoBox' ? item.boxesCount + 'x Caja(s)' : item.qty + 'x'} ${item.name} = $${sub.toLocaleString()}\n`;
+            });
+
+            message += `\n💰 *TOTAL: $${total.toLocaleString()}*\n\n¡Anapoima, Cundinamarca!`;
+
+            cart = [];
+            updateCartBadge();
+            toggleCartModal();
+
+            window.open(`https://wa.me/${storeData.whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        function toggleAdminModal() {
+            document.getElementById('adminModal').classList.toggle('hidden');
+        }
+
+        function verifyAdminLogin() {
+            if (document.getElementById('adminPasswordInput').value === 'panda2026') {
+                document.getElementById('adminLoginBox').classList.add('hidden');
+                document.getElementById('adminDashboardBox').classList.remove('hidden');
+                loadAdminData();
+            } else {
+                alert('Contraseña incorrecta. Utiliza: panda2026');
+            }
+        }
+
+        function logoutAdmin() {
+            document.getElementById('adminDashboardBox').classList.add('hidden');
+            document.getElementById('adminLoginBox').classList.remove('hidden');
+            document.getElementById('adminPasswordInput').value = '';
+        }
+
+        function loadAdminData() {
+            document.getElementById('adminWhatsappInput').value = storeData.whatsappNumber;
+            document.getElementById('adminPromoPriceInput').value = storeData.promoBoxPrice;
+            document.getElementById('adminHeroTitleInput').value = storeData.heroTitle;
+            document.getElementById('adminAboutInput').value = storeData.aboutText;
+            document.getElementById('adminEventTitleInput').value = storeData.eventTitle;
+            document.getElementById('adminEventDescInput').value = storeData.eventDesc;
+            document.getElementById('adminEventPriceInput').value = storeData.eventPrice;
+            document.getElementById('adminEventCardTitleInput').value = storeData.eventCardTitle;
+            document.getElementById('adminInstagramInput').value = storeData.instagramUrl;
+            document.getElementById('adminFacebookInput').value = storeData.facebookUrl;
+            document.getElementById('adminTiktokInput').value = storeData.tiktokUrl;
+
+            const container = document.getElementById('adminFlavorsListContainer');
+            container.innerHTML = '';
+
+            storeData.flavors.forEach((flavor, idx) => {
+                const div = document.createElement('div');
+                div.className = 'bg-gray-50 p-4 rounded-xl border border-gray-200 grid grid-cols-1 sm:grid-cols-6 gap-3 items-center text-xs';
+                div.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <img id="previewFlavor_${idx}" src="${flavor.image}" class="w-12 h-12 rounded-xl object-cover border border-amber-300">
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-gray-500 block">Nombre #${flavor.id}</span>
+                        <input type="text" id="admName_${idx}" value="${flavor.name}" class="w-full bg-white border border-gray-300 rounded px-2 py-1 font-bold">
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-gray-500 block">Precio ($)</span>
+                        <input type="number" id="admPrice_${idx}" value="${flavor.price}" class="w-full bg-white border border-gray-300 rounded px-2 py-1">
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-gray-500 block">Stock</span>
+                        <input type="number" id="admStock_${idx}" value="${flavor.stock}" class="w-full bg-white border border-gray-300 rounded px-2 py-1">
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-gray-500 block">Categoría</span>
+                        <select id="admCat_${idx}" class="w-full bg-white border border-gray-300 rounded px-2 py-1">
+                            <option value="niños" ${flavor.category === 'niños' ? 'selected' : ''}>Niños</option>
+                            <option value="adultos" ${flavor.category === 'adultos' ? 'selected' : ''}>Adultos</option>
+                            <option value="familia" ${flavor.category === 'familia' ? 'selected' : ''}>Familia</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span class="text-[10px] text-gray-500 block">Foto PC</span>
+                        <input type="file" id="admFile_${idx}" accept="image/*" onchange="previewFlavorUpload(event, ${idx})" class="w-full text-[10px]">
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function previewImageUpload(event, type) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    if (type === 'logo') storeData.logoImg = e.target.result;
+                    else if (type === 'hero') storeData.heroImg = e.target.result;
+                    else if (type === 'event') storeData.eventImg = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function previewFlavorUpload(event, idx) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    storeData.flavors[idx].image = e.target.result;
+                    document.getElementById(`previewFlavor_${idx}`).src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function saveAdminChanges() {
+            storeData.whatsappNumber = document.getElementById('adminWhatsappInput').value.trim() || "573000000000";
+            storeData.promoBoxPrice = parseFloat(document.getElementById('adminPromoPriceInput').value) || 24000;
+            storeData.heroTitle = document.getElementById('adminHeroTitleInput').value.trim();
+            storeData.aboutText = document.getElementById('adminAboutInput').value.trim();
+            storeData.eventTitle = document.getElementById('adminEventTitleInput').value.trim();
+            storeData.eventDesc = document.getElementById('adminEventDescInput').value.trim();
+            storeData.eventPrice = parseFloat(document.getElementById('adminEventPriceInput').value) || 32000;
+            storeData.eventCardTitle = document.getElementById('adminEventCardTitleInput').value.trim();
+            storeData.instagramUrl = document.getElementById('adminInstagramInput').value.trim();
+            storeData.facebookUrl = document.getElementById('adminFacebookInput').value.trim();
+            storeData.tiktokUrl = document.getElementById('adminTiktokInput').value.trim();
+
+            storeData.flavors.forEach((flavor, idx) => {
+                const nameInput = document.getElementById(`admName_${idx}`);
+                const priceInput = document.getElementById(`admPrice_${idx}`);
+                const stockInput = document.getElementById(`admStock_${idx}`);
+                const catInput = document.getElementById(`admCat_${idx}`);
+                if (nameInput) flavor.name = nameInput.value;
+                if (priceInput) flavor.price = parseFloat(priceInput.value) || 3500;
+                if (stockInput) flavor.stock = parseInt(stockInput.value) || 0;
+                if (catInput) flavor.category = catInput.value;
+            });
+
+            renderAll();
+            toggleAdminModal();
+            alert('¡Cambios guardados y publicados con éxito en la web!');
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
