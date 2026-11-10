@@ -380,7 +380,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <select id="custDeliveryMode" onchange="toggleDeliveryAddress()" class="bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500">
                             <option value="Recoger en establecimiento">Recoger en establecimiento</option>
-                            <option value="Solicitar domicilio">Solicitar domicilio</option>
+                            <option value="Solicitar domicilio">Solicitar domicilio(Pedido mínimo 8 helados)</option>
                         </select>
                         <input type="text" id="custAddress" placeholder="Dirección de entrega" class="bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-500 hidden">
                     </div>
@@ -544,15 +544,15 @@
 
     <script>
         let storeData = {
-            whatsappNumber: "573000000000",
+            whatsappNumber: "573168365216",
             promoBoxPrice: 24000,
             logoImg: "Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg",
             heroImg: "Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg",
             heroTitle: "¡Disfruta el sabor de la felicidad con Los Helados D’ Panda!",
-            aboutText: "En Los Helados D’ Panda nos dedicamos a elaborar helados artesanales únicos en el corazón de Anapoima, Cundinamarca. Seleccionamos cuidadosamente cada ingrediente para garantizar una frescura inigualable, creando momentos felices para niños, adultos y toda la familia.",
+            aboutText: "En Los Helados D’ Panda nos dedicamos a elaborar helados artesanales con dedicación y amor! Con variedad de sabores, seleccionamos cuidadosamente cada ingrediente para garantizar una frescura inigualable, creando momentos felices para niños, adultos y toda la familia.",
             eventTitle: "¡Festival de Halloween y Sabores Mágicos!",
             eventDesc: "Durante todo este mes disfrutas de nuestra edición limitada inspirada en Halloween. Ven disfrazado o pide tu caja especial de temporada con sorpresas y decoraciones exclusivas en Anapoima.",
-            eventPrice: 32000,
+            eventPrice: 52000,
             eventCardTitle: "Caja Misteriosa D' Panda",
             eventImg: "Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg",
             instagramUrl: "#",
@@ -568,7 +568,7 @@
                     id: i,
                     name: `Sabor ${i}`,
                     description: `Helado artesanal elaborado con dedicación en Anapoima.`,
-                    price: 3500,
+                    price: 6500,
                     stock: 20,
                     category: categories[(i - 1) % 3],
                     image: "Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg"
