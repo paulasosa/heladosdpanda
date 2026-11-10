@@ -15,28 +15,28 @@
 
     <div class="bg-amber-500 text-amber-950 px-4 py-2 text-center text-xs md:text-sm font-semibold flex items-center justify-center gap-2 shadow-inner">
         <i class="fa-solid fa-location-dot animate-bounce"></i>
-        <span>¡Elaborados con amor y dedicación en Anapoima, Cundinamarca! 🇨🇴 Pedidos directos por WhatsApp.</span>
+        <span>¡Elaborados con amor y dedicación en Anapoima, Cundinamarca!</span>
     </div>
 
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-amber-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#inicio" class="flex items-center gap-3 group">
                 <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400 bg-amber-100 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                    <img id="navLogoImg" src="Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg" onerror="this.src='https://placehold.co/100x100/f59e0b/ffffff?text=Panda'" alt="Logo" class="w-full h-full object-cover">
+                    <img id="navLogoImg" src="Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg" onerror="this.src='./img/logo.jpeg'" alt="Logo" class="w-full h-full object-cover">
                 </div>
                 <div>
                     <h1 class="font-extrabold text-lg sm:text-xl text-amber-950 tracking-tight leading-none">Los Helados D’ Panda</h1>
-                    <span class="text-xs font-medium text-amber-600">Artesanales de Anapoima</span>
+                    <span class="text-xs font-medium text-amber-600">100% Artesanales en Anapoima</span>
                 </div>
             </a>
 
             <nav class="hidden lg:flex items-center gap-5 font-medium text-sm text-gray-700">
                 <a href="#inicio" class="hover:text-amber-600 transition-colors">Inicio</a>
                 <a href="#quienes-somos" class="hover:text-amber-600 transition-colors">Quiénes somos</a>
-                <a href="#evento-especial" class="hover:text-amber-600 transition-colors text-purple-700 font-bold flex items-center gap-1"><i class="fa-solid fa-wand-magic-sparkles"></i> Especial del Mes</a>
-                <a href="#sabores" class="hover:text-amber-600 transition-colors">Sabores (17)</a>
+                <!--<a href="#evento-especial" class="hover:text-amber-600 transition-colors text-purple-700 font-bold flex items-center gap-1"><i class="fa-solid fa-wand-magic-sparkles"></i> Especial del Mes</a>-->
+                <a href="#sabores" class="hover:text-amber-600 transition-colors">Sabores</a>
                 <a href="#promos" class="hover:text-amber-600 transition-colors">Combos</a>
-                <a href="#otros-productos" class="hover:text-amber-600 transition-colors">Más Productos</a>
+                <!--<a href="#otros-productos" class="hover:text-amber-600 transition-colors">Más Productos</a>-->
                 <a href="#ubicacion" class="hover:text-amber-600 transition-colors">Visítanos</a>
             </nav>
 
@@ -46,10 +46,11 @@
                     <span id="cartBadge" class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
                 </button>
 
-                <button onclick="toggleAdminModal()" class="bg-gray-900 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-xs font-semibold shadow-md transition-all flex items-center gap-2">
+                <!--<button onclick="toggleAdminModal()" class="bg-gray-900 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-xs font-semibold shadow-md transition-all flex items-center gap-2">
                     <i class="fa-solid fa-lock text-[10px]"></i>
                     <span>Administración</span>
                 </button>
+                -->
 
                 <button onclick="toggleMobileMenu()" class="lg:hidden text-gray-700 p-2 focus:outline-none">
                     <i class="fa-solid fa-bars text-2xl"></i>
@@ -60,10 +61,10 @@
         <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-2 shadow-lg">
             <a href="#inicio" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Inicio</a>
             <a href="#quienes-somos" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Quiénes somos</a>
-            <a href="#evento-especial" onclick="toggleMobileMenu()" class="block py-2 text-purple-700 font-bold">Especial del Mes (Halloween / Fechas)</a>
-            <a href="#sabores" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Nuestros 17 Sabores</a>
+            <!--<a href="#evento-especial" onclick="toggleMobileMenu()" class="block py-2 text-purple-700 font-bold">Especial del Mes (Halloween / Fechas)</a>-->
+            <a href="#sabores" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Nuestros Sabores</a>
             <a href="#promos" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Combos y Promociones</a>
-            <a href="#otros-productos" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Otros Productos</a>
+            <!--<a href="#otros-productos" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Otros Productos</a>-->
             <a href="#ubicacion" onclick="toggleMobileMenu()" class="block py-2 text-gray-700 font-medium">Visítanos</a>
         </div>
     </header>
@@ -73,24 +74,24 @@
         <section id="inicio" class="relative bg-gradient-to-b from-amber-100/60 via-amber-50/30 to-white py-16 md:py-24 overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6 text-center md:text-left">
-                    <span class="inline-flex items-center gap-2 bg-amber-200/80 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    <!--<span class="inline-flex items-center gap-2 bg-amber-200/80 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                         <i class="fa-solid fa-ice-cream"></i> 100% Artesanales en Anapoima
-                    </span>
+                    </span>-->
                     <h2 id="heroTitle" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-amber-950 tracking-tight leading-tight">
                         ¡Disfruta el sabor de la felicidad con Los Helados D’ Panda!
                     </h2>
                     <p id="heroSubtitle" class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-xl mx-auto md:mx-0">
-                        Helados artesanales elaborados en Anapoima, Cundinamarca, con dedicación y variedad de sabores para disfrutar en familia.
+                        Helados artesanales elaborados con dedicación y amor! Con variedad de sabores para disfrutar en familia en Anapoima, Cundinamarca.
                     </p>
                     <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
                         <a href="#sabores" class="bg-amber-500 hover:bg-amber-600 text-amber-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all flex items-center gap-2">
                             <span>Conoce nuestros sabores</span>
                             <i class="fa-solid fa-arrow-down"></i>
                         </a>
-                        <a href="#evento-especial" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-md flex items-center gap-2">
+                        <!--<a href="#evento-especial" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-md flex items-center gap-2">
                             <i class="fa-solid fa-wand-magic-sparkles"></i>
                             <span id="heroEventBtnText">Especial Halloween</span>
-                        </a>
+                        </a>-->
                         <a href="#ubicacion" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-3.5 rounded-xl transition-all shadow-sm flex items-center gap-2">
                             <i class="fa-solid fa-map-location-dot"></i>
                             <span>Cómo llegar</span>
@@ -101,7 +102,7 @@
                 <div class="relative flex justify-center">
                     <div class="absolute -inset-2 bg-gradient-to-tr from-amber-400 to-orange-300 rounded-3xl blur-lg opacity-30 animate-pulse"></div>
                     <div class="relative bg-white p-4 rounded-3xl shadow-xl border-4 border-amber-200 max-w-md w-full">
-                        <img id="heroMainImg" src="Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg" onerror="this.src='https://placehold.co/500x500/f59e0b/ffffff?text=Helados+D+Panda'" alt="Helados D' Panda" class="rounded-2xl w-full h-80 object-cover shadow-inner">
+                        <img id="heroMainImg" src="Gemini_Generated_Image_81yf9h81yf9h81yf_2.jpeg" onerror="this.src='./img/portada.jpeg'" alt="Helados D' Panda" class="rounded-2xl w-full h-80 object-cover shadow-inner">
                         <div class="mt-4 bg-amber-50 p-4 rounded-xl border border-amber-200 flex items-center gap-4">
                             <div class="w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center font-bold text-lg shrink-0">
                                 <i class="fa-solid fa-heart"></i>
@@ -122,12 +123,12 @@
                 <span class="text-amber-600 font-bold uppercase tracking-widest text-xs">Nuestra Historia</span>
                 <h3 class="text-3xl font-extrabold text-amber-950">Pasión por el helado artesanal</h3>
                 <p id="aboutText" class="text-gray-600 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-                    En Los Helados D’ Panda nos dedicamos a elaborar helados artesanales únicos en el corazón de Anapoima, Cundinamarca. Seleccionamos cuidadosamente cada ingrediente para garantizar una frescura inigualable, creando momentos felices para niños, adultos y toda la familia.
+                    En Helados D’ Panda nos dedicamos a elaborar helados artesanales únicos en el corazón del hogar. Seleccionamos cuidadosamente cada ingrediente para garantizar una frescura inigualable, creando momentos felices para niños, adultos y toda la familia.
                 </p>
             </div>
         </section>
 
-        <!-- Special Event / Halloween Section -->
+        <!-- Special Event / Halloween Section
         <section id="evento-especial" class="py-20 bg-gradient-to-r from-purple-900 via-purple-950 to-indigo-950 text-white relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div class="space-y-6 text-center lg:text-left">
@@ -155,7 +156,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
 
         <!-- 17 Flavors Catalog -->
         <section id="sabores" class="py-20 bg-amber-50/30">
